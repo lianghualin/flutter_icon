@@ -1,0 +1,16 @@
+name: flutter_icon
+description: Animated morph icon that transitions between sidebar and tab bar layouts. Includes static painters and an interactive animated widget.
+version: 0.0.1
+homepage: https://github.com/user/flutter_morph_icon
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
