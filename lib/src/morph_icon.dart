@@ -65,7 +65,7 @@ class _MorphSidebarTabBarIconState extends State<MorphSidebarTabBarIcon>
         builder: (context, _) {
           return CustomPaint(
             size: Size.square(widget.size),
-            painter: _MorphIconPainter(
+            painter: MorphIconPainter(
               progress: _progress.value,
               color: widget.color,
               strokeWidth: widget.strokeWidth ?? (widget.size / 16).clamp(1.0, 3.0),
@@ -77,8 +77,8 @@ class _MorphSidebarTabBarIconState extends State<MorphSidebarTabBarIcon>
   }
 }
 
-class _MorphIconPainter extends CustomPainter {
-  _MorphIconPainter({
+class MorphIconPainter extends CustomPainter {
+  MorphIconPainter({
     required this.progress,
     required this.color,
     required this.strokeWidth,
@@ -155,7 +155,7 @@ class _MorphIconPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(_MorphIconPainter oldDelegate) {
+  bool shouldRepaint(MorphIconPainter oldDelegate) {
     return oldDelegate.progress != progress ||
         oldDelegate.color != color ||
         oldDelegate.strokeWidth != strokeWidth;
